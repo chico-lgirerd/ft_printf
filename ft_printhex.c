@@ -6,11 +6,11 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:47:09 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/08 11:21:18 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/08 11:46:38 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft/include/libft.h"
 
 int	hex_len(unsigned int n)
 {
