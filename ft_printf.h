@@ -6,13 +6,14 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:23:46 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/08 10:24:27 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/08 11:27:08 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#define FT_PRINTF_H
 
 #include <sys/errno.h>
+#include <fcntl.h>
 
 #endif
