@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:09:58 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/10 14:39:05 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/10 15:13:41 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,4 +52,9 @@ int	ft_printnumber(int n)
 	len = ft_printstr(num);
 	free(num);
 	return (len);
+}
+
+int	ft_printchar(int c)
+{
+	return(write(1, &c, 1));
 }
