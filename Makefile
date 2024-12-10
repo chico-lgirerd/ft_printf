@@ -6,13 +6,14 @@
 #    By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/05 15:39:13 by lgirerd           #+#    #+#              #
-#    Updated: 2024/12/05 15:39:56 by lgirerd          ###   ########lyon.fr    #
+#    Updated: 2024/12/10 11:58:52 by lgirerd          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libftprintf.a 
 
-SOURCES = 
+SOURCES = ft_printhex.c \
+			ft_subprints.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
