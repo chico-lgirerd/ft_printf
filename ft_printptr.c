@@ -6,11 +6,12 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:10:53 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/10 13:32:12 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/10 14:00:10 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "libft.h"
 
 int	ptr_len(uintptr_t n)
 {
@@ -25,9 +26,20 @@ int	ptr_len(uintptr_t n)
 	return (len);
 }
 
-int	ft_putptr(uintptr_t n)
+void	ft_putptr(uintptr_t n)
 {
-	
+	if (n >= 16)
+	{
+		ft_putptr(n / 16);
+		ft_putptr(n % 16);
+	}
+	else
+	{
+		if (n <= 9)
+			ft_putchar_fd((n + '0'), 1);
+		else
+			ft_putchar_fd((n + '0' + 'a'), 1);
+	}
 }
 
 int	ft_printptr(unsigned long long ptr)
@@ -36,11 +48,19 @@ int	ft_printptr(unsigned long long ptr)
 
 	print_len = 0;
 	print_len += write(1, "0x", 2);
-	if (ptr == NULL)
-		print_len += (1, "0", 1);
+	if (ptr == 0)
+		print_len += write(1, "0", 1);
 	else
 	{
-		
+		ft_putptr(ptr);
+		print_len += ptr_len(ptr);
 	}
 	return (print_len);
+}
+
+int	main(void)
+{
+	int x = 1;
+	int len = ft_printptr(x);
+	return (len);
 }
