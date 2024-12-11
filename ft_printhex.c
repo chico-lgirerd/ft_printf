@@ -6,11 +6,16 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:47:09 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 13:51:52 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 14:07:42 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	ft_putchar(int c)
+{
+	write(1, &c, 1);
+}
 
 int	hex_len(unsigned int n)
 {
@@ -33,7 +38,7 @@ void	ft_puthex(unsigned int n, const char format)
 		ft_puthex(n % 16, format);
 	}
 	else if (n <= 9)
-		ft_putchar(n + ' 0');
+		ft_putchar(n + '0');
 	else
 	{
 		if (format == 'x')
@@ -46,7 +51,7 @@ void	ft_puthex(unsigned int n, const char format)
 int	ft_printhex(unsigned int n, const char format)
 {
 	if (n == 0)
-		return (write(1, '0', 1));
+		return (write(1, "0", 1));
 	ft_puthex(n, format);
 	return (hex_len(n));
 }

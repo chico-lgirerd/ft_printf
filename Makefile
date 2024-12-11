@@ -6,7 +6,7 @@
 #    By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/05 15:39:13 by lgirerd           #+#    #+#              #
-#    Updated: 2024/12/11 14:01:28 by lgirerd          ###   ########lyon.fr    #
+#    Updated: 2024/12/11 14:09:58 by lgirerd          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,16 +24,16 @@
 
 NAME = libftprintf.a
 
-SOURCES = ft_printf.c \
-			ft_printhex.c \
+SOURCES = ft_printhex.c \
 			ft_printptr.c \
 			ft_printfutils.c \
 			ft_printfutils2.c \
-			ft_subprints.c 
+			ft_subprints.c \
+			ft_printf.c
 
 OBJECTS = $(SOURCES:.c=.o)
 
-CFLAGS = -Wall -Wextra -Werror -I
+CFLAGS = -Wall -Wextra -Werror
 
 all: $(NAME)
 

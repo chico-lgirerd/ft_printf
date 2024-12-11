@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:55:37 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 13:56:40 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 14:14:24 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,10 @@ char	*ft_strdup(const char *s)
 	char	*d;
 
 	i = 0;
-	d = malloc((ft_strlen(s) * sizeof(char)) + 1);
+	d = malloc((ft_strlen((char *)s) * sizeof(char)) + 1);
 	if (d == NULL)
 		return (NULL);
-	while (i < ft_strlen(s))
+	while (i < ft_strlen((char *)s))
 	{
 		d[i] = s[i];
 		i++;
@@ -99,4 +99,3 @@ char	*ft_itoa(int nb)
 	res[i] = '\0';
 	return (reverse(res));
 }
-

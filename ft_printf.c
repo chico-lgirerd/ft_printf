@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:17:14 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 13:59:35 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 14:13:27 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_handler(va_list args, const char format)
 	if (format == 'X')
 		print_len += ft_printhex(va_arg(args, unsigned int), 'X');
 	if (format == '%')
-		print_len += write(1, "%" ,1);
+		print_len += write(1, "%", 1);
 	return (print_len);
 }
 

@@ -6,12 +6,11 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:09:58 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 13:50:14 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 14:13:46 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
 
 void	ft_putstr(char *s)
 {
@@ -29,6 +28,7 @@ int	ft_printstr(char *s)
 {
 	int	i;
 
+	i = 0;
 	if (s == NULL)
 	{
 		ft_putstr("(null)");

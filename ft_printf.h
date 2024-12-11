@@ -6,18 +6,18 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:23:46 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 14:03:59 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 14:12:54 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <fcntl.h>
-#include <unistd.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <stdarg.h>
+# include <fcntl.h>
+# include <unistd.h>
+# include <stdlib.h>
+# include <stdint.h>
+# include <stdarg.h>
 
 int		ft_printstr(char *s);
 int		ft_printnumber(int n);
@@ -29,5 +29,6 @@ char	*ft_strdup(const char *s);
 char	*ft_itoa(int nb);
 int		ft_printf(const char *s, ...);
 int		ft_handler(va_list args, const char format);
+void	ft_putchar(int c);
 
 #endif
