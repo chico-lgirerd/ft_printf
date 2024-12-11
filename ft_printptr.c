@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:10:53 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/10 14:04:03 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 12:45:57 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,4 @@ int	ft_printptr(unsigned long long ptr)
 		print_len += ptr_len(ptr);
 	}
 	return (print_len);
-}
-
-int	main(void)
-{
-	int x = 1;
-	int len = ft_printptr(x);
-	return (len);
 }
