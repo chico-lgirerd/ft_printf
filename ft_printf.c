@@ -6,11 +6,11 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:17:14 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 13:26:17 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 13:59:35 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "include/ft_printf.h"
+#include "ft_printf.h"
 
 int	ft_handler(va_list args, const char format)
 {
@@ -32,7 +32,7 @@ int	ft_handler(va_list args, const char format)
 	if (format == 'X')
 		print_len += ft_printhex(va_arg(args, unsigned int), 'X');
 	if (format == '%')
-		print_len += ft_printpercent();
+		print_len += write(1, "%" ,1);
 	return (print_len);
 }
 
@@ -40,8 +40,10 @@ int	ft_printf(const char *s, ...)
 {
 	int		i;
 	int		print_len;
-	va_list args;
+	va_list	args;
 
+	if (s == NULL)
+		return (-1);
 	i = 0;
 	print_len = 0;
 	va_start(args, s);
@@ -49,8 +51,13 @@ int	ft_printf(const char *s, ...)
 	{
 		if (s[i] == '%')
 		{
-			
+			print_len += ft_handler(args, s[i + 1]);
+			i++;
 		}
+		else
+			print_len += ft_printchar(s[i]);
+		i++;
 	}
-	return (print_len)
+	va_end(args);
+	return (print_len);
 }

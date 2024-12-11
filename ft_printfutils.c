@@ -1,35 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_printfutils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/04 15:30:18 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/11/08 16:20:13 by lgirerd          ###   ########lyon.fr   */
+/*   Created: 2024/12/11 13:49:46 by lgirerd           #+#    #+#             */
+/*   Updated: 2024/12/11 13:55:49 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putchar(int c)
 {
-	int				i;
-	char			*p;
-	unsigned char	uc;
+	write(1, &c, 1);
+}
 
-	p = NULL;
-	uc = (unsigned char)c;
-	if (!s)
-		return (NULL);
+size_t	ft_strlen(char *s)
+{
+	size_t	i;
+	
 	i = 0;
 	while (s[i])
-	{
-		if (s[i] == (char)c)
-			p = ((char *)(s + i));
 		i++;
-	}
-	if (uc == '\0')
-		return ((char *)(s + i));
-	return (p);
+	return (i);
 }

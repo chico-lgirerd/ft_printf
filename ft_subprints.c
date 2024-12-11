@@ -6,12 +6,12 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:09:58 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 12:46:42 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 13:50:14 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include "include/libft.h"
+
 
 void	ft_putstr(char *s)
 {

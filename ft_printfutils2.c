@@ -1,16 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_printfutils2.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/05 15:36:59 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/11/08 17:19:58 by lgirerd          ###   ########lyon.fr   */
+/*   Created: 2024/12/11 13:55:37 by lgirerd           #+#    #+#             */
+/*   Updated: 2024/12/11 13:56:40 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
+
+char	*ft_strdup(const char *s)
+{
+	size_t	i;
+	char	*d;
+
+	i = 0;
+	d = malloc((ft_strlen(s) * sizeof(char)) + 1);
+	if (d == NULL)
+		return (NULL);
+	while (i < ft_strlen(s))
+	{
+		d[i] = s[i];
+		i++;
+	}
+	d[i] = '\0';
+	return (d);
+}
 
 int	num_len(int nb)
 {
@@ -81,3 +99,4 @@ char	*ft_itoa(int nb)
 	res[i] = '\0';
 	return (reverse(res));
 }
+
