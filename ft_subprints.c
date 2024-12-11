@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:09:58 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 14:13:46 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 16:17:28 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,4 @@ int	ft_printnumber(int n)
 int	ft_printchar(int c)
 {
 	return (write(1, &c, 1));
-}
-
-int	ft_printunsigned(unsigned int n)
-{
-	int		len;
-	char	*num;
-
-	len = 0;
-	num = ft_itoa(n);
-	len = ft_printstr(num);
-	free(num);
-	return (len);
 }

@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:17:14 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 14:13:27 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 16:15:28 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int	ft_handler(va_list args, const char format)
 	if (format == 'd' || format == 'i')
 		print_len += ft_printnumber(va_arg(args, int));
 	if (format == 'u')
-		print_len += ft_printnumber(va_arg(args, unsigned int));
+		print_len += ft_printunsigned(va_arg(args, unsigned int));
 	if (format == 'x')
 		print_len += ft_printhex(va_arg(args, unsigned int), 'x');
 	if (format == 'X')

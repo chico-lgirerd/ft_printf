@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:23:46 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 14:12:54 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 16:21:51 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ char	*ft_itoa(int nb);
 int		ft_printf(const char *s, ...);
 int		ft_handler(va_list args, const char format);
 void	ft_putchar(int c);
+int		ft_printunsigned(unsigned int n);
+int		num_len(int nb);
 
 #endif

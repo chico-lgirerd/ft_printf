@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:10:53 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 13:52:42 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 15:48:05 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ int	ptr_len(uintptr_t n)
 {
 	int	len;
 
+	if (n == 0)
+		return (1);
 	len = 0;
 	while (n)
 	{
@@ -37,7 +39,7 @@ void	ft_putptr(uintptr_t n)
 		if (n <= 9)
 			ft_putchar(n + '0');
 		else
-			ft_putchar(n + '0' + 'a');
+			ft_putchar(n - 10 + 'a');
 	}
 }
 
@@ -46,11 +48,11 @@ int	ft_printptr(unsigned long long ptr)
 	int	print_len;
 
 	print_len = 0;
-	print_len += write(1, "0x", 2);
 	if (ptr == 0)
-		print_len += write(1, "0", 1);
+		print_len += write(1, "(nil)", 5);
 	else
 	{
+		print_len += write(1, "0x", 2);
 		ft_putptr(ptr);
 		print_len += ptr_len(ptr);
 	}
