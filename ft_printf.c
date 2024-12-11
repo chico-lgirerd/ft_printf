@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 12:17:14 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 12:44:57 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 13:26:17 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,10 +28,12 @@ int	ft_handler(va_list args, const char format)
 	if (format == 'u')
 		print_len += ft_printnumber(va_arg(args, unsigned int));
 	if (format == 'x')
-		print_len +=
+		print_len += ft_printhex(va_arg(args, unsigned int), 'x');
 	if (format == 'X')
+		print_len += ft_printhex(va_arg(args, unsigned int), 'X');
 	if (format == '%')
 		print_len += ft_printpercent();
+	return (print_len);
 }
 
 int	ft_printf(const char *s, ...)
@@ -43,5 +45,12 @@ int	ft_printf(const char *s, ...)
 	i = 0;
 	print_len = 0;
 	va_start(args, s);
-	
+	while (s[i])
+	{
+		if (s[i] == '%')
+		{
+			
+		}
+	}
+	return (print_len)
 }

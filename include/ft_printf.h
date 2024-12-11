@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:23:46 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 12:47:10 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 13:19:21 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ int	ft_printstr(char *s);
 int	ft_printnumber(int n);
 int	ft_printptr(unsigned long long ptr);
 int	ft_printchar(int c);
+int	ft_printhex(unsigned int n, const char format);
 
 #endif

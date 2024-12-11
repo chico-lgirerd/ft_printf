@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:47:09 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 12:45:39 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 13:19:24 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ void	ft_puthex(unsigned int n, const char format)
 	}
 }
 
-int	printhex(unsigned int n, const char format)
+int	ft_printhex(unsigned int n, const char format)
 {
 	if (n == 0)
 		return (write(1, '0', 1));

@@ -6,7 +6,7 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:10:53 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 12:45:57 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/11 13:18:33 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,4 +56,9 @@ int	ft_printptr(unsigned long long ptr)
 		print_len += ptr_len(ptr);
 	}
 	return (print_len);
+}
+
+int	ft_printpercent(void)
+{
+	return (write(1, '%', 1));
 }
