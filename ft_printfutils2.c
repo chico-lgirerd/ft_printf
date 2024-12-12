@@ -6,11 +6,12 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:55:37 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 14:14:24 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/12 15:06:14 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

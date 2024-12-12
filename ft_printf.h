@@ -6,18 +6,15 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/08 10:23:46 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 16:21:51 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/12 15:05:36 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <fcntl.h>
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdint.h>
-# include <stdarg.h>
+#include <stddef.h>
+#include <stdarg.h>
 
 int		ft_printstr(char *s);
 int		ft_printnumber(int n);

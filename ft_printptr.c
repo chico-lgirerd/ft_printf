@@ -6,11 +6,12 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/10 13:10:53 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 15:48:05 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/12 15:07:40 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdint.h>
 
 int	ptr_len(uintptr_t n)
 {

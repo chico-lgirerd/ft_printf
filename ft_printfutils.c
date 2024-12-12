@@ -6,11 +6,12 @@
 /*   By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/11 13:49:46 by lgirerd           #+#    #+#             */
-/*   Updated: 2024/12/11 16:26:14 by lgirerd          ###   ########lyon.fr   */
+/*   Updated: 2024/12/12 15:05:56 by lgirerd          ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdlib.h>
 
 size_t	ft_strlen(char *s)
 {
