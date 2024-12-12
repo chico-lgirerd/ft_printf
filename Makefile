@@ -6,7 +6,7 @@
 #    By: lgirerd <lgirerd@student.42lyon.fr>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/05 15:39:13 by lgirerd           #+#    #+#              #
-#    Updated: 2024/12/11 17:01:30 by lgirerd          ###   ########lyon.fr    #
+#    Updated: 2024/12/12 15:04:04 by lgirerd          ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ all: $(NAME)
 $(NAME): $(OBJECTS)
 	ar rcs $(NAME) $(OBJECTS)
 
-%.o: %.c ft_printf.h
+%.o: %.c ft_printf.h Makefile
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
